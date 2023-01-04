@@ -1,5 +1,16 @@
+$main-background: #0a092d;
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.zsGreen {
+  color: #008136;
+}
+
+body {
+  background: $main-background;
+  color: white;
 }
