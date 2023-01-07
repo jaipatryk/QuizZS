@@ -35,4 +35,16 @@
     width: 100%;
     bottom: -130%;
   }
+
+  .quizCard {
+    @apply bg-cardbg p-3 rounded flex flex-col gap-10 relative overflow-hidden cursor-pointer select-none;
+    box-shadow: inset 0px 0px 0px 0px #fff;
+    transition: all 0.3s;
+  }
+  .quizCard:hover {
+    box-shadow: inset 0px -5px 0px 0px #fff;
+  }
+  .dropdownElement {
+    @apply text-white text-sm font-bold py-3 pl-5 pr-20 w-full hover:bg-zs1green hover:text-white rounded;
+  }
 }

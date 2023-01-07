@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className={poppinsRegular.className}>
+      <body className={`${poppinsRegular.className} bg-primary`}>
         {/* @ts-ignore */}
         <Header />
         {children}

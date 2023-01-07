@@ -22,7 +22,7 @@ interface QuizList {
 
 function QuizElement({ quiz }: QuizListProps) {
   return (
-    <div className='bg-cardbg p-3 rounded flex flex-col gap-10'>
+    <div className='quizCard'>
       <div>
         <p className='font-semibold text-lg'>{quiz.name}</p>
         <p className='text-sm text-gray-500'>{quiz.questions.length} pojęć</p>
