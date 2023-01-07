@@ -1,5 +1,11 @@
 import React from "react";
 
-export default function HomePage() {
-  return <h1>QuizZS</h1>;
+function HomePage() {
+  return (
+    <main>
+      <h1 className="text-4xl">siema</h1>
+    </main>
+  );
 }
+
+export default HomePage;
