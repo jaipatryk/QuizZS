@@ -9,7 +9,9 @@ module.exports = {
     extend: {
       colors: {
         primary: "#0a092d",
+        quizLetGray: "#282e3e",
         zs1green: "#00bfa6",
+        cardbg: "#2e3856",
       },
     },
   },

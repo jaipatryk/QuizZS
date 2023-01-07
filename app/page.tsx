@@ -1,9 +1,10 @@
 import React from "react";
+import QuizList from "./(QuizList)/QuizList";
 
 function HomePage() {
   return (
-    <main>
-      <h1 className="text-4xl">siema</h1>
+    <main className='bg-primary text-white p-10'>
+      <QuizList />
     </main>
   );
 }
