@@ -3,7 +3,6 @@ import SigninButton from "./SigninButton";
 import LoginButton from "./LoginButton";
 import Hamburger from "./Hamburger";
 import { cookies } from "next/headers";
-import Reloader from "./Reloader";
 
 function RightNav() {
   const cookiesList = cookies();
