@@ -13,6 +13,9 @@ module.exports = {
         zs1green: "#008136",
         cardbg: "#2e3856",
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],
