@@ -12,21 +12,22 @@ function LoginButton() {
   const pathname = usePathname();
   const session = useSelector((state: RootState) => state.session);
   const dispatch = useDispatch();
-  // const [cookies, setCookie, removeCookie] = useCookies(["session"]);
 
   function handleLogin() {
     dispatch(setSession(true));
-    // setCookie("session", true);
     Cookies.set("session", "true");
+    location.reload();
   }
 
   return (
     <Link
-      href='#'
-      className={`nav-link ${pathname === "/oauth/login" && "active"}`}>
+      href="#"
+      className={`nav-link ${pathname === "/oauth/login" && "active"}`}
+    >
       <div
         onClick={handleLogin}
-        className='text-white px-4 py-2 rounded-md font-medium bg-primary'>
+        className="text-white px-4 py-2 rounded-md font-medium bg-primary"
+      >
         Zaloguj się
       </div>
     </Link>

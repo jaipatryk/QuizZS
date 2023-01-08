@@ -1,44 +1,26 @@
-"use client";
-
-import React, { Suspense } from "react";
+import React from "react";
 import SigninButton from "./SigninButton";
 import LoginButton from "./LoginButton";
 import Hamburger from "./Hamburger";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
-import { useCookies } from "react-cookie";
-import Cookies from "js-cookie";
-import dynamic from "next/dynamic";
+import { cookies } from "next/headers";
+import Reloader from "./Reloader";
 
 function RightNav() {
-  const session = useSelector((state: RootState) => state.session);
+  const cookiesList = cookies();
 
-  console.log(session.session);
-
-  if (session.session === true) {
+  if (cookiesList.get("session")?.value === "true") {
     return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <div className='flex space-x-5 items-center relative'>
-          <Hamburger />
-        </div>
-      </Suspense>
+      <div className="flex space-x-5 items-center relative">
+        <Hamburger />
+      </div>
     );
-  } else if (session.session === false) {
-    return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <div className='flex space-x-5 items-center'>
-          <LoginButton />
-          <SigninButton />
-        </div>
-      </Suspense>
-    );
-  } else {
-    return <div className='flex space-x-5 items-center w-80 bg-gray-300'></div>;
   }
+  return (
+    <div className="flex space-x-5 items-center">
+      <LoginButton />
+      <SigninButton />
+    </div>
+  );
 }
 
-export default dynamic(() => Promise.resolve(RightNav), {
-  ssr: false,
-});
-
-// export default RightNav;
+export default RightNav;

@@ -1,14 +1,7 @@
 import React from "react";
 import "../styles/globals.css";
 import Header from "./(Header)/Header";
-import { Poppins } from "@next/font/google";
 import { Providers } from "./provider";
-
-const poppinsRegular = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-});
 
 export default function RootLayout({
   children,
@@ -18,7 +11,7 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className={`${poppinsRegular.className} bg-primary`}>
+      <body className={` bg-primary`}>
         <Providers>
           {/* @ts-ignore */}
           <Header />
