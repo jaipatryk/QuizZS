@@ -10,18 +10,23 @@ function Nav() {
   return (
     <nav className="h-full">
       <ul className="flex items-center space-x-10 h-full">
-        <Link href="/" className={`${pathname === "/" && "active"} nav-link`}>
+        <Link
+          href="/"
+          className={`nav-link${pathname === "/" ? " active" : ""}`}
+        >
           <li>Strona główna</li>
         </Link>
         <Link
           href="#"
-          className={`${pathname === "/quizes" && "active"} nav-link`}
+          className={`nav-link${pathname === "/quizes" ? " active" : ""}`}
         >
           <li>Quizy</li>
         </Link>
         <Link
           href="#"
-          className={`${pathname === "/classification" && "active"} nav-link`}
+          className={`nav-link${
+            pathname === "/classification" ? " active" : ""
+          }`}
         >
           <li>Ranking</li>
         </Link>
