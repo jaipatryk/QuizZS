@@ -578,8 +578,8 @@ function QuizList() {
       <div className='w-full space-y-4'>
         <h2 className='font-bold text-2xl'>Lista quizów</h2>
         <div className='grid grid-cols-3 gap-2'>
-          {Quizzes.map((quiz) => (
-            <QuizElement quiz={quiz} />
+          {Quizzes.map((quiz, i) => (
+            <QuizElement quiz={quiz} key={i} />
           ))}
         </div>
       </div>

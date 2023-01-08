@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/globals.css";
 import Header from "./(Header)/Header";
 import { Poppins } from "@next/font/google";
+import { Providers } from "./provider";
 
 const poppinsRegular = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -18,9 +19,11 @@ export default function RootLayout({
     <html>
       <head />
       <body className={`${poppinsRegular.className} bg-primary`}>
-        {/* @ts-ignore */}
-        <Header />
-        {children}
+        <Providers>
+          {/* @ts-ignore */}
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );

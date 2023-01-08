@@ -1,12 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import LoginButton from "./LoginButton";
-import SigninButton from "./SigninButton";
 import Nav from "./Nav";
-import Hamburger from "./Hamburger";
+import RightNav from "./RightNav";
+import Cookies from "js-cookie";
 
 function Header() {
-  const session = true;
+  Cookies.set("session", "true");
 
   return (
     <header className='sticky overflow-hidden px-5 py-4 z-40 border-b-2 border-b-quizLetGray select-none'>
@@ -20,16 +19,7 @@ function Header() {
           <div className='border-gray-700 border-r-2 h-full'></div>
           <Nav />
         </div>
-        {!session ? (
-          <div className='flex space-x-5 items-center'>
-            <LoginButton />
-            <SigninButton />
-          </div>
-        ) : (
-          <div className='flex space-x-5 items-center relative'>
-            <Hamburger />
-          </div>
-        )}
+        <RightNav />
       </div>
     </header>
   );
