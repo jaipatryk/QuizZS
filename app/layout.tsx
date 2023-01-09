@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className={` bg-primary`}>
+      <body className='bg-primary min-h-screen flex flex-col flex-wrap'>
         <Providers>
           {/* @ts-ignore */}
           <Header />
