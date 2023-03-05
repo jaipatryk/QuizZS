@@ -39,7 +39,7 @@ function LoginComponent() {
               <input
                 type='password'
                 className={`loginInput${
-                  loginInput ? " border-yellow-300" : " border-white"
+                  passwordInput ? " border-yellow-300" : " border-white"
                 }`}
                 placeholder='Hasło'
                 value={passwordInput}

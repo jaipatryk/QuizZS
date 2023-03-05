@@ -1,12 +1,14 @@
 import React from "react";
 
-export default async function Head() {
+async function Head() {
   return (
     <>
-      <title>HomePage | QuizZS</title>
+      <title>Login | QuizZS</title>
       <meta content='width=device-width, initial-scale=1' name='viewport' />
       <meta charSet='utf-8' />
       <link rel='icon' href='/favicon.ico' />
     </>
   );
 }
+
+export default Head;

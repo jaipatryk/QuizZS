@@ -22,7 +22,7 @@ function LoginButton() {
   return (
     <Link
       href='/auth/login'
-      className={`nav-link${pathname === "/auth/login" && " active"}`}>
+      className={`nav-link${pathname === "/auth/login" ? " active" : ""}`}>
       <div
         // onClick={handleLogin}
         className='text-white px-4 py-2 rounded-md font-medium bg-primary'>
